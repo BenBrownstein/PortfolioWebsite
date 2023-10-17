@@ -21,3 +21,10 @@ body {
     background-repeat: repeat;
     background-attachment: fixed;
 }
+
+#password-prompt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
