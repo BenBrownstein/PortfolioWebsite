@@ -1,0 +1,8 @@
+@font-face {
+    font-family: Blogger Sans;
+    src: url("Fonts/blogger-sans-font/Bloggersans-0rzv.otf");
+}
+
+h1 {
+    font-family: Blogger Sans;
+}
