@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Byte Bandits Portfolio</title>
+    <style>
+        body {
+            font-family: 'Transformers', sans-serif; /* Updated font */
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: url('https://cdn.discordapp.com/attachments/1153846497805336618/1162895576090808320/4cowboys.png?ex=653d99e6&is=652b24e6&hm=221e5d95a628b47ecdf9b423b31bda961159d1365e9faf57d6d966377d2989e1&');
+            background-size: cover;
+            background-position: center;
+            color: yellow; /* Updated font color to yellow */
+            padding: 1rem;
+            text-align: center;
+            height: 100vh;
+            transition: background-image 1s ease-in-out;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav a {
+            color: yellow; /* Setting the font color for the anchor tags */
+            text-decoration: none; /* Removing default underline */
+        }
+
+        main {
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="portfolio-header">
+        <h1>Byte Bandits</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="home-link">Home</a></li>
+                <li><a href="#" id="member1-link">Ben</a></li>
+                <li><a href="#" id="member2-link">Randall</a></li>
+                <li><a href="#" id="member3-link">Jessica</a></li>
+                <li><a href="#" id="member4-link">Brian</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="content">
+        <!-- Content will be dynamically loaded here -->
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const teamMembers = [
+                { name: 'PAGE FOR BEN', content: 'Content for Ben', image: 'https://logos.flamingtext.com/Name-Logos/Ben-design-power-name.gif' },
+                { name: 'PAGE FOR RANDALL', content: 'Content for Randall', image: 'https://logos.flamingtext.com/Name-Logos/Randall-design-power-name.gif' },
+                { name: 'PAGE FOR JESSICA', content: 'Content for Jessica', image: 'https://logos.flamingtext.com/Name-Logos/Jessica-design-power-name.gif' },
+                { name: 'PAGE FOR BRIAN', content: 'Content for Brian', image: 'https://logos.flamingtext.com/Name-Logos/Brian-design-power-name.gif' }
+            ];
+
+            const contentContainer = document.getElementById('content');
+            const header = document.getElementById('portfolio-header');
+
+            function loadContent(member) {
+                contentContainer.innerHTML = `<h2>${member.name}</h2><p>${member.content}</p>`;
+                // Change background image
+                header.style.backgroundImage = `url('${member.image}')`;
+            }
+
+            document.getElementById('home-link').addEventListener('click', function () {
+                contentContainer.innerHTML = '<h2>Welcome to Byte Bandits!</h2>';
+                // Change background image to initial one
+                header.style.backgroundImage = "url('https://cdn.discordapp.com/attachments/1153846497805336618/1162895576090808320/4cowboys.png?ex=653d99e6&is=652b24e6&hm=221e5d95a628b47ecdf9b423b31bda961159d1365e9faf57d6d966377d2989e1')";
+            });
+
+            teamMembers.forEach((member, index) => {
+                const memberLink = document.getElementById(`member${index + 1}-link`);
+                memberLink.addEventListener('click', function () {
+                    loadContent(member);
+                });
+            });
+
+            // Uncomment and use the following sections when ready to add more functionality
+
+            // function loadAdditionalContent(member) {
+            //     // Add logic to load additional content for each member
+            // }
+
+            // teamMembers.forEach((member, index) => {
+            //     const memberLink = document.getElementById(`member${index + 1}-link`);
+            //     memberLink.addEventListener('click', function () {
+            //         loadAdditionalContent(member);
+            //     });
+            // });
+
+        });
+    </script>
+</body>
+
+</html>
