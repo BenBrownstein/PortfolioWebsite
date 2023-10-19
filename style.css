@@ -7,6 +7,12 @@ h1 {
     font-family: Blogger Sans;
 }
 
+
+body {
+    font-family: Blogger Sans;
+    background-color: #3570de;
+}
+
 /* nav menu section*/
 #nav_menu ul
 {
