@@ -17,15 +17,13 @@
         $(document).ready(function () {
             $('#nav_menu').slicknav({ prependTo: "#mobile_menu" });
         });
-
-        function promptForSecretCode() {
-            var secretCode = prompt("Please enter the secret code:");
-            if (secretCode === "rstlne") { // Replace with your actual secret code
-                window.location.href = "RSTLNE.html"; // Redirect to the secret page
-            } else {
-                alert("Incorrect secret code. Please try again.");
-            }
-        }
+    </script>
+    <script src="randall-index.js">
+        document.getElementById("secretCodeButton").addEventListener("click", function () {
+            var scriptElement = document.createElement("script");
+            scriptElement.src = "randall-index.js";
+            document.head.appendChild(scriptElement);
+        });
     </script>
     <script src="https://kit.fontawesome.com/68b2479946.js" crossorigin="anonymous"></script>
     <!--Note: 68b2479946.js is your fontawesome ID-->
@@ -52,8 +50,8 @@
     <p>Here is comtact.</p>
     <p><i class="fa-solid fa-envelope"></i> randalldizon@ispotato.com</p>
     <p><i class="fa-solid fa-phone-volume"></i> 55-IS-POTATO</p>
-    <a class="hiddenIcon"href="#" onclick="promptForSecretCode();"><i class="fa-solid fa-key"></i></a>
-    <p class="hidden">Hint: What are the top 10 most common letters? Then throw them into the wheel of fortune.</p>
+    <a class="hiddenIcon" href="#" onclick="promptForSecretCode();"><i class="fa-solid fa-key"></i></a>
+    <p class="hidden">The key to the code is hidden in the top 10 most common letters. Once you find that out, throw them into the wheel of fortune. Therein lies the key.</p>
 </body>
 
 </html>
