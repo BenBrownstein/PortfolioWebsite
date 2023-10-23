@@ -10,10 +10,12 @@
 
 .hidden {
     font-family: wingdings;
+    font-size: 2px;
     color: #3570de;
     bottom: 10px;
     right: 10px;
     position: fixed;
+    margin: 0px 0px 0px 0px; /*Note: top right bottom left*/
 }
 
 
