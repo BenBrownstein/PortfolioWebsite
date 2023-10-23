@@ -28,9 +28,14 @@
 
         nav {
             background-color: #333;
-            overflow: hidden;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             display: flex;
-            justify-content: center;
+            justify-content: center; /* Center horizontally */
         }
 
         nav a {
@@ -49,18 +54,34 @@
             text-align: center;
             color: white; /* Text color set to white */
         }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .contact-section img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
 </head>
 
 <body>
     <nav>
-        <a href="ben.html">Ben</a>
-        <a href="randall.html">Randall</a>
-        <a href="jessica.html">Jessica</a>
-        <a href="brian.html">Brian</a>
+        <!-- Navigation Bar -->
+        <ul>
+            <li><a href="../index.html" style="color: white;">Home</a></li>
+            <li><a href="ben-index.html" style="color: white;">Ben</a></li>
+            <li><a href="../randall-portfolio/randall-index.html" style="color: white;">Randall</a></li>
+            <li><a href="../jessica-portfolio/jessica-index.html" style="color: white;">Jessica</a></li>
+            <li><a href="../brian-portfolio/brian-index.html" style="color: white;">Brian</a></li>
+        </ul>
     </nav>
 
-    <header id="portfolio-header">
+    <header>
         <h1>ByteBandits</h1>
     </header>
 
@@ -68,6 +89,14 @@
         <h2>Brian</h2>
         <p>Content for Brian</p>
     </main>
+
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Contact Information</h2>
+        <img src="https://smoothcomp.com/pictures/t/1734349-xc0n/brian-louderback.jpg" alt="Brian's Image">
+        <p>Email: brian@example.com</p>
+        <p>Phone: (123) 456-7890</p>
+    </div>
 </body>
 
 </html>
