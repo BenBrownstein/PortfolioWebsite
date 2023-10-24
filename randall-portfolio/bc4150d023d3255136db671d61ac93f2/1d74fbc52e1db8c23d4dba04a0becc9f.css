@@ -22,6 +22,40 @@ body {
     background-attachment: fixed;
 }
 
+body {
+    
+}
+body address {
+    font-size: 12px;
+}
+
+body h1 {
+    font-size: 48px;
+}
+
+body h2 {
+    font-size: 24px;
+}
+
+body h3 {
+    font-size: 12px;
+}
+
+body ul li {
+    font-size: 12px;
+}
+
+img {
+    width: 50%;
+    opacity: 33%;
+    margin: 0 25% 0;
+}
+
+a {
+    color: rgba(255, 255, 255, 0.067);
+}
+
 .invert-colors {
-    filter: invert(1); /* Inverts colors */
+    filter: invert(1);
+    /* Inverts colors */
 }
