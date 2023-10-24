@@ -57,5 +57,4 @@ a {
 
 .invert-colors {
     filter: invert(1);
-    /* Inverts colors */
 }
