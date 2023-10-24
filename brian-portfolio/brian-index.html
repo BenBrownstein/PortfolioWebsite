@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brian Louderback</title>
-
     <link rel="icon" href="your-favicon.png"> <!-- Replace with your own favicon link -->
     <link rel="stylesheet" href="../style.css"> <!-- Link to your own stylesheet -->
 </head>
-
 <body style="background-color: #3570de">
     <nav id="nav_menu">
         <ul>
@@ -23,7 +19,7 @@
     </nav>
     <h1>Brian Louderback</h1>
     <img src="https://smoothcomp.com/pictures/t/1734349-xc0n/brian-louderback.jpg" alt="Brian Louderback" width="auto" height="auto" style="max-width: 100%; max-height: 100%;">
-    
+
     <section id="contact">
         <h2>Contact Information</h2>
         <address>
@@ -60,10 +56,120 @@
         <p>Supervised every element of overall operations and security of 12 personnel...</p>
         <!-- Add more work experience details here -->
     </section>
-    
+
+    <div id="pong-game-container">
+        <canvas id="pong-game" width="800" height="400"></canvas>
+    </div>
+
     <footer>
         <p>&copy; 2023 Brian Louderback</p>
     </footer>
-</body>
 
+    <script>
+        const canvas = document.getElementById("pong-game");
+        const context = canvas.getContext("2d");
+        const ballRadius = 10;
+        let ballX = canvas.width / 2;
+        let ballY = canvas.height / 2;
+        let ballSpeedX = 5;
+        let ballSpeedY = 5;
+        let paddleHeight = 80;
+        let paddleWidth = 10;
+        let paddleAY = (canvas.height - paddleHeight) / 2;
+        let paddleBY = (canvas.height - paddleHeight) / 2;
+        let scoreA = 0;
+        let scoreB = 0;
+        let gamePaused = false;
+
+        function drawBall(x, y) {
+            context.beginPath();
+            context.arc(x, y, ballRadius, 0, Math.PI * 2);
+            context.fillStyle = "white";
+            context.fill();
+            context.closePath();
+        }
+
+        function drawPaddle(x, y) {
+            context.fillStyle = "white";
+            context.fillRect(x, y, paddleWidth, paddleHeight);
+        }
+
+        function drawScores() {
+            context.font = "24px Arial";
+            context.fillStyle = "white";
+            context.fillText("Player A: " + scoreA, 50, 30);
+            context.fillText("Player B: " + scoreB, canvas.width - 150, 30);
+        }
+
+        function draw() {
+            if (gamePaused) {
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.font = "36px Arial";
+                context.fillStyle = "white";
+                context.fillText("Paused", canvas.width / 2 - 60, canvas.height / 2);
+                return;
+            }
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            drawBall(ballX, ballY);
+            drawPaddle(0, paddleAY);
+            drawPaddle(canvas.width - paddleWidth, paddleBY);
+            drawScores();
+
+            ballX += ballSpeedX;
+            ballY += ballSpeedY;
+
+            if (ballY < ballRadius || ballY > canvas.height - ballRadius) {
+                ballSpeedY = -ballSpeedY;
+            }
+
+            if (ballX < paddleWidth) {
+                if (ballY > paddleAY && ballY < paddleAY + paddleHeight) {
+                    ballSpeedX = -ballSpeedX;
+                    scoreA++;
+                } else {
+                    scoreB++;
+                    if (scoreB >= 10) {
+                        gamePaused = true;
+                        context.font = "36px Arial";
+                        context.fillStyle = "white";
+                        context.fillText("Player B Wins!", canvas.width / 2 - 120, canvas.height / 2);
+                    }
+                    ballX = canvas.width / 2;
+                    ballY = canvas.height / 2;
+                    ballSpeedX = 5;
+                    ballSpeedY = 5;
+                }
+            }
+
+            if (ballX > canvas.width - paddleWidth) {
+                if (ballY > paddleBY && ballY < paddleBY + paddleHeight) {
+                    ballSpeedX = -ballSpeedX;
+                    scoreB++;
+                } else {
+                    scoreA++;
+                    if (scoreA >= 10) {
+                        gamePaused = true;
+                        context.font = "36px Arial";
+                        context.fillStyle = "white";
+                        context.fillText("Player A Wins!", canvas.width / 2 - 120, canvas.height / 2);
+                    }
+                    ballX = canvas.width / 2;
+                    ballY = canvas.height / 2;
+                    ballSpeedX = 5;
+                    ballSpeedY = 5;
+                }
+            }
+
+            requestAnimationFrame(draw);
+        }
+
+        canvas.addEventListener("mousemove", function (e) {
+            const mouseY = e.clientY - canvas.getBoundingClientRect().top;
+            paddleAY = mouseY - paddleHeight / 2;
+        });
+
+        // Start the game loop
+        draw();
+    </script>
+</body>
 </html>
