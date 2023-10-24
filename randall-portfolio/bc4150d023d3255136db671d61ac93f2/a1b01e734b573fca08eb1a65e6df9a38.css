@@ -24,4 +24,6 @@ body {
 
 .hiddenIcon {
     color: #0000000e;
+    bottom: 0px;
+    position: fixed;
 }
