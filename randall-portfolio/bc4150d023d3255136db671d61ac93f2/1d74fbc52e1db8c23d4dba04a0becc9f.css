@@ -45,6 +45,12 @@ body ul li {
     font-size: 12px;
 }
 
+img:hover {
+    width: 100%;
+    opacity: 67%;
+    margin: 0;
+}
+
 img {
     width: 50%;
     opacity: 33%;
