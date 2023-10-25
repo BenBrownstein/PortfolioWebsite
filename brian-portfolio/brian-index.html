@@ -7,34 +7,18 @@
     <link rel="icon" href="your-favicon.png"> <!-- Replace with your own favicon link -->
     <link rel="stylesheet" href="../style.css"> <!-- Link to your own stylesheet -->
     <style>
-        /* Styles for video window */
-        .video-container {
-            display: flex;
-            align-items: center;
-        }
-        .video-window {
-            display: block;
-            margin-left: 10px;
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-            max-width: 560px;
-        }
-        .video-close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-        }
-        iframe {
-            width: 100%;
-            height: 315px;
-        }
-
         /* Center the logo horizontally */
         .logo-container {
             display: flex;
             justify-content: center;
             padding-top: 20px; /* Adjust the padding as needed */
+        }
+
+        /* Style for Pong game iframe */
+        iframe.pong {
+            display: block;
+            margin: 0 auto;
+            border: none;
         }
     </style>
 </head>
@@ -77,47 +61,10 @@
         <p>Astute military professional with over 20 years of experience supervising, training, and motivating team members in the most challenging work environments. Extensive knowledge of Programmable Logic Controllers, Underwater Electronic Systems, Local Area Networks, and Detainee Operations.</p>
     </section>
 
-    <section id="work-experience">
-        <h2>Work Experience</h2>
-        <p><strong>Delivery Return to Stock (RTS) Associate</strong></p>
-        <p>Amazon (2022-2023)</p>
-        <p>Played a key role in enhancing operations at Amazon DSE-8 in Bremerton, Washington...</p>
-        <p><strong>FT Division Supervisor</strong></p>
-        <p>USS Louisiana SSBN 743(G) (2012-2017)</p>
-        <p>Coordinated hundreds of jobs between four maintenance facility shops during arduous maintenance periods...</p>
-        <p><strong>IT Division Supervisor</strong></p>
-        <p>Commander Submarine Force, U.S. Pacific Fleet (March 2010 - July 2012)</p>
-        <p>Trained and groomed eight sailors and twenty-five civilians and contractors in the structural rehabilitation of the staff headquarters building...</p>
-        <p><strong>Correction Officer (Government Service)</strong></p>
-        <p>Camp Taji, Iraq (December 2008-March 2010)</p>
-        <p>Supervised every element of overall operations and security of 12 personnel...</p>
-        <!-- Add more work experience details here -->
-    </section>
-
-    <div class="video-container">
-        <div class "video-window" id="video1">
-            <span class="video-close" onclick="closeVideo('video1')">&times;</span>
-            <iframe src="https://www.youtube.com/embed/gYbd0c1wngM" frameborder="0" allowfullscreen></iframe>
-        </div>
-    </div>
-
- 
+    <iframe class="pong" src="pong-game.html" width="800" height="600"></iframe>
 
     <footer>
         <p>&copy; 2023 Brian Louderback</p>
     </footer>
-
-    <script>
-        function closeVideo(videoId) {
-            const video = document.getElementById(videoId);
-            video.style.display = "none";
-        }
-    </script>
-    <script>
-        // Automatically open video window on page load
-        window.onload = function() {
-            document.getElementById('video1').style.display = 'block';
-        };
-    </script>
 </body>
 </html>
