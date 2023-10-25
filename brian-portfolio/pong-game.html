@@ -1,85 +1,20 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pong Game</title>
-    <style>
-      #game {
-        position: relative;
-        width: 600px;
-        height: 400px;
-        background-color: black;
-        margin: 0 auto;
-      }
-
-      #ball {
-        position: absolute;
-        width: 20px;
-        height: 20px;
-        background-color: white;
-        border-radius: 50%;
-      }
-
-      #paddle {
-        position: absolute;
-        width: 10px;
-        height: 100px;
-        background-color: white;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="game">
-      <div id="ball"></div>
-      <div id="paddle"></div>
+    <link rel="stylesheet" type="text/css" href="pong-game.css">
+</head>
+<body>
+    <div class="game">
+        <div class="paddle" id="player"></div>
+        <div class="paddle" id="computer"></div>
+        <div class="ball" id="ball"></div>
+        <div class="score">
+            <span id="player-score">0</span> - <span id="computer-score">0</span>
+        </div>
     </div>
-
-    <script>
-      const ball = document.getElementById('ball');
-      const paddle = document.getElementById('paddle');
-      const game = document.getElementById('game');
-
-      let ballX = 300;
-      let ballY = 200;
-      let ballSpeedX = 5;
-      let ballSpeedY = 2;
-
-      let paddleY = 150;
-
-      function updateGameArea() {
-        ballX += ballSpeedX;
-        ballY += ballSpeedY;
-
-        if (ballX > game.clientWidth) {
-          ballSpeedX *= -1;
-        }
-
-        if (ballY > game.clientHeight || ballY < 0) {
-          ballSpeedY *= -1;
-        }
-
-        if (ballX < 0) {
-          if (ballY > paddleY && ballY < paddleY + 100) {
-            ballSpeedX *= -1;
-          } else {
-            // Game over
-            alert('Game Over');
-            document.location.reload();
-          }
-        }
-
-        ball.style.left = ballX + 'px';
-        ball.style.top = ballY + 'px';
-
-        paddle.style.top = paddleY + 'px';
-
-        requestAnimationFrame(updateGameArea);
-      }
-
-      document.addEventListener('mousemove', (e) => {
-        paddleY = e.clientY - game.getBoundingClientRect().top - 50;
-      });
-
-      updateGameArea();
-    </script>
-  </body>
+    <script src="pong-game.js"></script>
+</body>
 </html>

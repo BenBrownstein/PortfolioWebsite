@@ -1,0 +1,51 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: black;
+}
+
+.game {
+    position: relative;
+    width: 600px;
+    height: 400px;
+    background-color: black;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.paddle {
+    width: 10px;
+    height: 100px;
+    background-color: white;
+    position: absolute;
+}
+
+#player {
+    left: 0;
+}
+
+#computer {
+    right: 0;
+}
+
+.ball {
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.score {
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
