@@ -13,30 +13,37 @@ let ballSpeedY = 5;
 let playerScoreValue = 0;
 let computerScoreValue = 0;
 
+const gameBounds = {
+    top: 0,
+    bottom: 400,
+    left: 0,
+    right: 600,
+};
+
 function update() {
     ballX += ballSpeedX;
     ballY += ballSpeedY;
 
     // Ball collision with top and bottom
-    if (ballY < 0 || ballY > 390) {
+    if (ballY < gameBounds.top || ballY > gameBounds.bottom) {
         ballSpeedY = -ballSpeedY;
     }
 
     // Ball collision with paddles
     if (
         (ballX < 10 && ballY > playerY && ballY < playerY + 100) ||
-        (ballX > 580 && ballY > computerY && ballY < computerY + 100)
+        (ballX > gameBounds.right - 10 && ballY > computerY && ballY < computerY + 100)
     ) {
         ballSpeedX = -ballSpeedX;
     }
 
     // Ball out of bounds
-    if (ballX < 0) {
+    if (ballX < gameBounds.left) {
         // Computer scores
         computerScoreValue++;
         computerScore.textContent = computerScoreValue;
         reset();
-    } else if (ballX > 600) {
+    } else if (ballX > gameBounds.right) {
         // Player scores
         playerScoreValue++;
         playerScore.textContent = playerScoreValue;
@@ -58,7 +65,7 @@ function reset() {
     ballY = 200;
     ballSpeedX = -5;
     ballSpeedY = 5;
-    playerY = 150;
+    playerY = Math.max(gameBounds.top, Math.min(playerY, gameBounds.bottom - 100));
     computerY = 150;
 }
 
@@ -73,7 +80,7 @@ function computerAI() {
 
 document.addEventListener("mousemove", (e) => {
     const mouseY = e.clientY - document.querySelector(".game").getBoundingClientRect().top;
-    playerY = mouseY - 50;
+    playerY = Math.max(gameBounds.top, Math.min(mouseY - 50, gameBounds.bottom - 100));
 });
 
 update();
