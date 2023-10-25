@@ -14,6 +14,11 @@ body {
 }
 
 /* nav menu section*/
+
+#nav_menu {
+	text-align: center; /* Center the navigation menu */
+}
+
 #nav_menu ul
 {
 	display: flex;
