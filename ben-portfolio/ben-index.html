@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Ben's Portfolio</title>
     <link rel="stylesheet" href="../style.css">
@@ -8,20 +9,36 @@
             display: block;
             margin: 0 auto;
         }
+
+        section img {
+            float: left;
+            margin: 10px;
+            margin-left: 30px;
+        }
+
         #Info {
             font-size: 125%;
         }
+
         #Example1Text {
             font-size: 150%;
         }
+
+        iframe {
+            float: left;
+            margin: 10px;
+            margin-left: 30px;
+        }
     </style>
 </head>
+
 <body>
     <!-- Flaming Text Logo -->
     <a target="_top" href="https://flamingtext.com/">
-        <img src="https://blog.flamingtext.com/blog/2023/10/25/flamingtext_com_1698199628_615509578.gif" border="0" alt="Logo Design by FlamingText.com" title="Logo Design by FlamingText.com">
+        <img id="Logo" src="https://blog.flamingtext.com/blog/2023/10/25/flamingtext_com_1698199628_615509578.gif"
+            border="0" alt="Logo Design by FlamingText.com" title="Logo Design by FlamingText.com">
     </a>
-    
+
     <header>
         <!-- Navigation Bar -->
         <nav id="nav_menu">
@@ -51,12 +68,21 @@
         <h1>Examples of Work</h1>
         <h2>Example 1</h2>
 
-        <img src="images/155 Website.png" alt="Picture of Website" height="25%" width="25%">
+        <img id="Example" src="images/155 Website.png" alt="Picture of Website" height="25%" width="25%">
         <div id="Example1Text">
             <p>This is a website that I created in CIS 155. It showcases my skill with HTML and CSS.</p>
             <p><a href="https://github.com/BenBrownstein/CIS155-Website/tree/main">GitHub Repository</a></p>
             <p><a href="https://benbrownstein.github.io/CIS155-Website/">GitPages</a></p>
         </div>
     </section>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <iframe src="rps.html" style="border:none;" height="275px" width="300px">
+
+    </iframe>
 </body>
+
 </html>
