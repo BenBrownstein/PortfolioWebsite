@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -36,6 +37,36 @@
         /* Formatting For the Contact Form */
         #contact-form {
             display: none;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 500px;
+            height: auto;
+            margin: 5px;
+        }
+
+        /* Formatting for Pong-Game*/
+        #games {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .game-container,
+        .image-container {
+            flex: 1;
+        }
+
+        .game-iframe {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -93,23 +124,45 @@
         <h2>Work Experience</h2>
         <p><strong>RTS Associate</strong></p>
         <p>Amazon (2022-2023)</p>
-        <p>Played a key role in enhancing operations at Amazon DSE-8 in Bremerton, Washington. Proficiently managed inventory accuracy and provided essential support to cross-functional teams. Adhered to stringent safety protocols, adapted adeptly to evolving procedures, and consistently exceeded productivity benchmarks. Fostered a collaborative and communicative team dynamic, providing valuable assistance to colleagues.</p>
+        <p>Played a key role in enhancing operations at Amazon DSE-8 in Bremerton, Washington. Proficiently managed
+            inventory accuracy and provided essential support to cross-functional teams. Adhered to stringent safety
+            protocols, adapted adeptly to evolving procedures, and consistently exceeded productivity benchmarks.
+            Fostered a collaborative and communicative team dynamic, providing valuable assistance to colleagues.</p>
         <p><strong>FT Division Supervisor</strong></p>
         <p>USS Louisiana SSBN 743(G) (2012-2017)</p>
-        <p>Coordinated hundreds of jobs between four maintenance facility shops during arduous maintenance periods, ensuring Louisiana's Data Processing and Underwater Acoustic Monitoring were ready for strategic tasking. Supervised and maintained the overall operations and security of a division of personnel standing 5 stations on board a Nuclear Submarine. Counseled personnel on their career incentives and future employments.</p>
+        <p>Coordinated hundreds of jobs between four maintenance facility shops during arduous maintenance periods,
+            ensuring Louisiana's Data Processing and Underwater Acoustic Monitoring were ready for strategic tasking.
+            Supervised and maintained the overall operations and security of a division of personnel standing 5 stations
+            on board a Nuclear Submarine. Counseled personnel on their career incentives and future employments.</p>
         <p><strong>IT Division Supervisor</strong></p>
         <p>Commander Submarine Force, U. S. Pacific Fleet (March 2010 - July 2012)</p>
-        <p>Trained and groomed eight sailors and twenty-five civilians and contractors in the structural rehabilitation of the staff headquarters building. Managed the reporting and tracking process of 58 spillages throughout the Pacific Theater of Operation. Coordinated the upgrading of 783 assets in the 2011 tech refresh. The partnering with civilian counterparts resulted in the procurement and replacement of staff network and peripheral upgrades with minimal downtime.</p>
+        <p>Trained and groomed eight sailors and twenty-five civilians and contractors in the structural rehabilitation
+            of the staff headquarters building. Managed the reporting and tracking process of 58 spillages throughout
+            the Pacific Theater of Operation. Coordinated the upgrading of 783 assets in the 2011 tech refresh. The
+            partnering with civilian counterparts resulted in the procurement and replacement of staff network and
+            peripheral upgrades with minimal downtime.</p>
         <p><strong>Correction Officer</strong></p>
         <p>(Government Service) Camp Taji, Iraq (December 2008-March 2010)</p>
-        <p>Supervised every element of overall operations and security of 12 personnel in charge of Camp Taji's procedures to include escort operations, restraint application, forced cell extractions, Detainee Information Management System (DIMS), Islamic cultural awareness. Provided safe humane care and custody of enemy combatants, collected intelligence for law enforcement and war crime investigations in support of Operation Iraqi Freedom.</p>
+        <p>Supervised every element of overall operations and security of 12 personnel in charge of Camp Taji's
+            procedures to include escort operations, restraint application, forced cell extractions, Detainee
+            Information Management System (DIMS), Islamic cultural awareness. Provided safe humane care and custody of
+            enemy combatants, collected intelligence for law enforcement and war crime investigations in support of
+            Operation Iraqi Freedom.</p>
     </section>
 
-    <iframe src="pong-game.html" width="600" height="405" frameborder="0"></iframe>
+    <section id="games">
+        <div class="game-container">
+            <iframe src="pong-game.html" width="600" height="405" frameborder="0"></iframe>
+        </div>
+        <div class="image-container">
+            <img src="images/image1.gif" alt="Image 1">
+        </div>
+    </section>
 
     <footer>
         <p>&copy; 2023 Brian Louderback</p>
     </footer>
     <script src="contact.js"></script>
 </body>
+
 </html>
