@@ -110,6 +110,9 @@
         #smoothcomp-link:hover {
             background-color: #178735;
         }
-
-      
+        
+        .rounded-image {
+            border-radius: 50%;
+            max-width: 100%;
+        }
         
