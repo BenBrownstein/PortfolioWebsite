@@ -71,3 +71,19 @@ document.addEventListener('DOMContentLoaded', function () {
         educationSection.appendChild(educationParagraph);
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const contactInformation = [
+        "4955 Hidden Terrace LN SE, Port Orchard WA 98366",
+        "(360) 472-8957"
+    ];
+
+    const contactSection = document.getElementById("contact");
+
+    // Create and append address elements for contact information
+    contactInformation.forEach(info => {
+        const addressElement = document.createElement("address");
+        addressElement.textContent = info;
+        contactSection.appendChild(addressElement);
+    });
+});
