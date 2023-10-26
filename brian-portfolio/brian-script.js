@@ -27,8 +27,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     ];
 
-    // Select the "Work Experience" section to append paragraphs
+    // Define an array of education experiences
+    const educationExperiences = [
+        {
+            school: "<strong>Mary M. Knight High School</strong>",
+            degree: "High School Diploma (1993)"
+        },
+        {
+            school: "<strong>Olympic College</strong>",
+            degree: "Associate of Applied Science-Transfer Software Development (2023)"
+        }
+    ];
+
+    // Select the "Work Experience" section to append job experiences
     const workExperienceSection = document.getElementById("work-experience");
+
+    // Select the "Education" section to append education experiences
+    const educationSection = document.getElementById("education");
 
     // Loop through job experiences and create and append paragraphs
     jobExperiences.forEach(experience => {
@@ -47,5 +62,12 @@ document.addEventListener('DOMContentLoaded', function () {
         const dividerParagraph = document.createElement("p");
         dividerParagraph.innerHTML = "<br>";
         workExperienceSection.appendChild(dividerParagraph);
+    });
+
+    // Loop through education experiences and create and append paragraphs
+    educationExperiences.forEach(education => {
+        const educationParagraph = document.createElement("p");
+        educationParagraph.innerHTML = `${education.school} - ${education.degree}`;
+        educationSection.appendChild(educationParagraph);
     });
 });
