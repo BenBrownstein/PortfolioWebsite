@@ -7,13 +7,14 @@
 <body>
   <h1>Rock, Paper, Scissors Game</h1>
   <p>Choose: Rock, Paper, or Scissors</p>
-  <button id="rock">Rock</button>
-  <button id="paper">Paper</button>
-  <button id="scissors">Scissors</button>
+  <button id="rock"> <img  src="images/Rock.jpg" alt="Rock" height="50px" width="50px"></button>
+  <button id="paper"><img  src="images/Paper.jpg" alt="Paper" height="50px" width="50px"></button>
+  <button id="scissors"><img  src="images/Scissors.jfif" alt="Scissors" height="50px" width="50px"></button>
+  <button id="cheat">Cheat</button>
   <p class="message"></p>
 
   <script>
-    const options = ["rock", "paper", "scissors"];
+    const options = ["rock", "paper", "scissors","cheat"];
 
     const buttons = document.querySelectorAll("button");
     const message = document.querySelector(".message");
@@ -24,7 +25,7 @@
 
     function playGame(e) {
       const playerChoice = e.target.id;
-      const computerChoice = options[Math.floor(Math.random() * 3)];
+      const computerChoice = options[Math.floor(Math.random() * 4)];
 
       const result = determineWinner(playerChoice, computerChoice);
 
@@ -37,7 +38,7 @@
       } else if (
         (player === "rock" && computer === "scissors") ||
         (player === "scissors" && computer === "paper") ||
-        (player === "paper" && computer === "rock")
+        (player === "paper" && computer === "rock") || (player === "cheat")
       ) {
         return "You win!";
       } else {
