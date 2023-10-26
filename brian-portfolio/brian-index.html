@@ -52,16 +52,7 @@
             margin: 5px;
         }
 
-        /* Set "image3.gif" as the background image */
-        body {
-            background-image: url("images/image3.gif");
-            background-size: cover;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-position: center;
-        }
-
-        /* Formatting for Pong-Game */
+        /* Formatting for Pong-Game*/
         #games {
             display: flex;
             justify-content: space-between;
@@ -77,125 +68,101 @@
             max-width: 100%;
             height: auto;
         }
-
-        /* Make the Education section and Footer text yellow */
-        #education,
-        footer {
-            color: yellow;
-        }
-
-        body {
-            background-image: url("images/image3.gif");
-            background-size: cover;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            background-position: center;
-            color: yellow;
-            /* Set font color to yellow */
-        }
     </style>
 </head>
 
 <body>
+    <div class="logo-container">
+        <a target="_top" href="https://flamingtext.com/">
+            <img src="https://blog.flamingtext.com/blog/2023/10/25/flamingtext_com_1698199628_615509578.gif" border="0"
+                alt="Logo Design by FlamingText.com" title="Logo Design by FlamingText.com">
+        </a>
+    </div>
+    <br /><a href="https://flamingtext.com/"></a>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="../index.html" style="color: white;">Home</a></li>
+            <li><a href="../ben-portfolio/ben-index.html" style="color: white;">Ben</a></li>
+            <li><a href="../randall-portfolio/randall-index.html" style="color: white;">Randall</a></li>
+            <li><a href="../jessica-portfolio/jessica-index.html" style="color: white;">Jessica</a></li>
+            <li><a href="../brian-portfolio/brian-index.html" style="color: white;">Brian</a></li>
+        </ul>
+    </nav>
+    <h1>Brian Louderback</h1>
+    <img src="https://smoothcomp.com/pictures/t/1734349-xc0n/brian-louderback.jpg" alt="Brian Louderback" width="auto"
+        height="auto" style="max-width: 100%; max-height: 100%;">
 
-    <body>
-        <div class="logo-container">
-            <a target="_top" href="https://flamingtext.com/">
-                <img src="https://blog.flamingtext.com/blog/2023/10/25/flamingtext_com_1698199628_615509578.gif"
-                    border="0" alt="Logo Design by FlamingText.com" title="Logo Design by FlamingText.com">
-            </a>
+    <section id="contact">
+        <h2>Contact Information</h2>
+        <address>
+            4955 Hidden Terrace LN SE, Port Orchard WA 98366<br>
+            (360) 472-8957<br>
+        </address>
+        <button id="show-contact-form">Contact</button>
+        <div id="contact-form">
+            <h2>Contact</h2>
+            <form id="email-form">
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="Send">
+            </form>
         </div>
-        <br /><a href="https://flamingtext.com/"></a>
-        <nav id="nav_menu">
-            <ul>
-                <li><a href="../index.html" style="color: white;">Home</a></li>
-                <li><a href="../ben-portfolio/ben-index.html" style="color: white;">Ben</a></li>
-                <li><a href="../randall-portfolio/randall-index.html" style="color: white;">Randall</a></li>
-                <li><a href="../jessica-portfolio/jessica-index.html" style="color: white;">Jessica</a></li>
-                <li><a href="../brian-portfolio/brian-index.html" style="color: white;">Brian</a></li>
-            </ul>
-        </nav>
-        <h1>Brian Louderback</h1>
-        <img src="https://smoothcomp.com/pictures/t/1734349-xc0n/brian-louderback.jpg" alt="Brian Louderback"
-            width="auto" height="auto" style="max-width: 100%; max-height: 100%;">
+        <p><a href="https://github.com/blouderbback8" target="_blank">GitHub Profile</a></p>
+    </section>
 
-        <section id="contact">
-            <h2>Contact Information</h2>
-            <address>
-                4955 Hidden Terrace LN SE, Port Orchard WA 98366<br>
-                (360) 472-8957<br>
-            </address>
-            <button id="show-contact-form">Contact</button>
-            <div id="contact-form">
-                <h2>Contact</h2>
-                <form id="email-form">
-                    <label for="email">Your Email:</label>
-                    <input type="email" id="email" name="email" required><br><br>
+    <section id="education">
+        <h2>Education</h2>
+        <p>High School Diploma, Mary M. Knight High School, 1993</p>
+        <p>Associate of Applied Science-Transfer Software Development, Olympic College, 2023</p>
+    </section>
 
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="4" required></textarea><br><br>
+    <section id="work-experience">
+        <h2>Work Experience</h2>
+        <p><strong>RTS Associate</strong></p>
+        <p>Amazon (2022-2023)</p>
+        <p>Played a key role in enhancing operations at Amazon DSE-8 in Bremerton, Washington. Proficiently managed
+            inventory accuracy and provided essential support to cross-functional teams. Adhered to stringent safety
+            protocols, adapted adeptly to evolving procedures, and consistently exceeded productivity benchmarks.
+            Fostered a collaborative and communicative team dynamic, providing valuable assistance to colleagues.</p>
+        <p><strong>FT Division Supervisor</strong></p>
+        <p>USS Louisiana SSBN 743(G) (2012-2017)</p>
+        <p>Coordinated hundreds of jobs between four maintenance facility shops during arduous maintenance periods,
+            ensuring Louisiana's Data Processing and Underwater Acoustic Monitoring were ready for strategic tasking.
+            Supervised and maintained the overall operations and security of a division of personnel standing 5 stations
+            on board a Nuclear Submarine. Counseled personnel on their career incentives and future employments.</p>
+        <p><strong>IT Division Supervisor</strong></p>
+        <p>Commander Submarine Force, U. S. Pacific Fleet (March 2010 - July 2012)</p>
+        <p>Trained and groomed eight sailors and twenty-five civilians and contractors in the structural rehabilitation
+            of the staff headquarters building. Managed the reporting and tracking process of 58 spillages throughout
+            the Pacific Theater of Operation. Coordinated the upgrading of 783 assets in the 2011 tech refresh. The
+            partnering with civilian counterparts resulted in the procurement and replacement of staff network and
+            peripheral upgrades with minimal downtime.</p>
+        <p><strong>Correction Officer</strong></p>
+        <p>(Government Service) Camp Taji, Iraq (December 2008-March 2010)</p>
+        <p>Supervised every element of overall operations and security of 12 personnel in charge of Camp Taji's
+            procedures to include escort operations, restraint application, forced cell extractions, Detainee
+            Information Management System (DIMS), Islamic cultural awareness. Provided safe humane care and custody of
+            enemy combatants, collected intelligence for law enforcement and war crime investigations in support of
+            Operation Iraqi Freedom.</p>
+    </section>
 
-                    <input type="submit" value="Send">
-                </form>
-            </div>
-            <p><a href="https://github.com/blouderbback8" target="_blank">GitHub Profile</a></p>
-        </section>
+    <section id="games">
+        <div class="game-container">
+            <iframe src="pong-game.html" width="600" height="405" frameborder="0"></iframe>
+        </div>
+        <div class="image-container">
+            <img src="images/image1.gif" alt="Image 1">
+        </div>
+    </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <p>High School Diploma, Mary M. Knight High School, 1993</p>
-            <p>Associate of Applied Science-Transfer Software Development, Olympic College, 2023</p>
-        </section>
-
-        <section id="work-experience">
-            <h2>Work Experience</h2>
-            <p><strong>RTS Associate</strong></p>
-            <p>Amazon (2022-2023)</p>
-            <p>Played a key role in enhancing operations at Amazon DSE-8 in Bremerton, Washington. Proficiently managed
-                inventory accuracy and provided essential support to cross-functional teams. Adhered to stringent safety
-                protocols, adapted adeptly to evolving procedures, and consistently exceeded productivity benchmarks.
-                Fostered a collaborative and communicative team dynamic, providing valuable assistance to colleagues.
-            </p>
-            <p><strong>FT Division Supervisor</strong></p>
-            <p>USS Louisiana SSBN 743(G) (2012-2017)</p>
-            <p>Coordinated hundreds of jobs between four maintenance facility shops during arduous maintenance periods,
-                ensuring Louisiana's Data Processing and Underwater Acoustic Monitoring were ready for strategic
-                tasking.
-                Supervised and maintained the overall operations and security of a division of personnel standing 5
-                stations
-                on board a Nuclear Submarine. Counseled personnel on their career incentives and future employments.</p>
-            <p><strong>IT Division Supervisor</strong></p>
-            <p>Commander Submarine Force, U. S. Pacific Fleet (March 2010 - July 2012)</p>
-            <p>Trained and groomed eight sailors and twenty-five civilians and contractors in the structural
-                rehabilitation
-                of the staff headquarters building. Managed the reporting and tracking process of 58 spillages
-                throughout
-                the Pacific Theater of Operation. Coordinated the upgrading of 783 assets in the 2011 tech refresh. The
-                partnering with civilian counterparts resulted in the procurement and replacement of staff network and
-                peripheral upgrades with minimal downtime.</p>
-            <p><strong>Correction Officer</strong></p>
-            <p>(Government Service) Camp Taji, Iraq (December 2008-March 2010)</p>
-            <p>Supervised every element of overall operations and security of 12 personnel in charge of Camp Taji's
-                procedures to include escort operations, restraint application, forced cell extractions, Detainee
-                Information Management System (DIMS), Islamic cultural awareness. Provided safe humane care and custody
-                of
-                enemy combatants, collected intelligence for law enforcement and war crime investigations in support of
-                Operation Iraqi Freedom.</p>
-        </section>
-
-        <section id="games">
-            <div class="game-container">
-                <iframe src="pong-game.html" width="600" height="405" frameborder="0"></iframe>
-            </div>
-            <div class="image-container">
-                <img src="images/image1.gif" alt="Image 1">
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2023 Brian Louderback</p>
-        </footer>
-        <script src="contact.js"></script>
-    </body>
+    <footer>
+        <p>&copy; 2023 Brian Louderback</p>
+    </footer>
+    <script src="contact.js"></script>
+</body>
 
 </html>
