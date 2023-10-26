@@ -94,7 +94,7 @@
             background-color: #178735;
             /* Change the background color on hover */
         }
-        
+
         #smoothcomp-link {
             display: inline-block;
             padding: 10px 20px;
@@ -110,3 +110,6 @@
         #smoothcomp-link:hover {
             background-color: #178735;
         }
+
+      
+        
