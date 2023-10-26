@@ -1,0 +1,78 @@
+        /* Center the logo horizontally */
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            padding-top: 20px;
+        }
+
+        /* Style for Pong game iframe */
+        iframe.pong {
+            display: block;
+            margin: 0 auto;
+            border: none;
+        }
+
+        /* Limit the width of the <p> tags and align them to the left */
+        p {
+            max-width: 600px;
+            margin: 0;
+            padding: 10px 0;
+        }
+
+        /* Reduce spacing between sections */
+        section {
+            margin-bottom: 20px;
+        }
+
+        /* Formatting For the Contact Form */
+        #contact-form {
+            display: none;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 500px;
+            height: auto;
+            margin: 5px;
+        }
+
+        /* Formatting for Pong-Game*/
+        #games {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .game-container,
+        .image-container {
+            flex: 1;
+        }
+
+        .game-iframe {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #email-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            /* Choose your desired background color */
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #email-link:hover {
+            background-color: #0056b3;
+            /* Change the background color on hover */
+        }

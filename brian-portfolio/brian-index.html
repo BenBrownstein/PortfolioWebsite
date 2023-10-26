@@ -7,68 +7,8 @@
     <title>Brian Louderback</title>
     <link rel="icon" href="../Media/Images/ByteBanditIcon.png">
     <link rel="stylesheet" href="../style.css">
-    <style>
-        /* Center the logo horizontally */
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            padding-top: 20px;
-        }
+    <link rel="stylesheet" href="brian-style.css">
 
-        /* Style for Pong game iframe */
-        iframe.pong {
-            display: block;
-            margin: 0 auto;
-            border: none;
-        }
-
-        /* Limit the width of the <p> tags and align them to the left */
-        p {
-            max-width: 600px;
-            margin: 0;
-            padding: 10px 0;
-        }
-
-        /* Reduce spacing between sections */
-        section {
-            margin-bottom: 20px;
-        }
-
-        /* Formatting For the Contact Form */
-        #contact-form {
-            display: none;
-        }
-
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 20px 0;
-        }
-
-        img {
-            max-width: 500px;
-            height: auto;
-            margin: 5px;
-        }
-
-        /* Formatting for Pong-Game*/
-        #games {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
-
-        .game-container,
-        .image-container {
-            flex: 1;
-        }
-
-        .game-iframe {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
 </head>
 
 <body>
@@ -98,19 +38,7 @@
             4955 Hidden Terrace LN SE, Port Orchard WA 98366<br>
             (360) 472-8957<br>
         </address>
-        <button id="show-contact-form">Contact</button>
-        <div id="contact-form">
-            <h2>Contact</h2>
-            <form id="email-form">
-                <label for="email">Your Email:</label>
-                <input type="email" id="email" name="email" required><br><br>
-
-                <label for="message">Message:</label><br>
-                <textarea id="message" name="message" rows="4" required></textarea><br><br>
-
-                <input type="submit" value="Send">
-            </form>
-        </div>
+        <a id="email-link" href="mailto:brianlouderback@student.olympic.edu">Email Me</a>
         <p><a href="https://github.com/blouderbback8" target="_blank">GitHub Profile</a></p>
     </section>
 
@@ -162,7 +90,7 @@
     <footer>
         <p>&copy; 2023 Brian Louderback</p>
     </footer>
-    <script src="contact.js"></script>
+
 </body>
 
 </html>
