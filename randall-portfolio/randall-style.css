@@ -3,12 +3,6 @@ body {
     height: 100%;
 }
 
-/* body {
-    background-image: linear-gradient(to bottom right, #3570de 33%, white 50%, #178735 85%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-} */
-
 iframe {
     margin: 8px 8px 8px -8px; /*Note: top right bottom left*/
     width: 100%;
@@ -16,8 +10,16 @@ iframe {
     border: none;
 }
 
+/* body {
+    background-image: linear-gradient(to bottom right, #3570de 33%, white 50%, #178735 85%);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+} */
+
 img {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.493), 0 6px 20px 0 rgba(0, 0, 0, 0.164);
+    border-radius: 20px;
+
 }
 
 body div img {
@@ -48,11 +50,11 @@ aside {
     }
 
     section ul {
-        order: 1;
+        /* order: 1; */
         margin: 16px 16px 0px 0px;
     }
     aside ul {
-        order: 2;
+        /* order: 2; */
         margin: 0px 16px 16px 0px
     }
 }
