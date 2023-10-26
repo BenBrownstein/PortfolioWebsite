@@ -64,3 +64,10 @@ a {
 .invert-colors {
     filter: invert(1);
 }
+
+@media only screen and (width <= 560px) {
+    img {
+        margin: 0px;
+        width: 100%;
+    }
+}

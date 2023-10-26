@@ -9,3 +9,9 @@ iframe {
     height: 100%;
     border: none;
 }
+
+@media only screen and (width <= 560px) {
+    img {
+        width: 100%;
+    }
+}
