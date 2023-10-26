@@ -3,11 +3,6 @@
     src: url("Fonts/blogger-sans-font/Bloggersans-0rzv.otf");
 }
 
-h1 {
-    font-family: Blogger Sans;
-}
-
-
 body {
     font-family: Blogger Sans;
     background-color: #3570de;
