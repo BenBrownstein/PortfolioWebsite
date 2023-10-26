@@ -94,3 +94,19 @@
             background-color: #178735;
             /* Change the background color on hover */
         }
+        
+        #smoothcomp-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #smoothcomp-link:hover {
+            background-color: #178735;
+        }
