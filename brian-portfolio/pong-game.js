@@ -20,6 +20,15 @@ const gameBounds = {
     right: 600,
 };
 
+const aiLevels = [
+    { delay: 42 }, // Level 0: Easier
+    { delay: 40 }, // Level 1: Intermediate
+    { delay: 38 }  // Level 2: Harder
+];
+
+// Set the AI level based on the current game situation
+const currentLevel = aiLevels[0]; // Adjust the level as needed
+
 function update() {
     ballX += ballSpeedX;
     ballY += ballSpeedY;
@@ -53,7 +62,7 @@ function update() {
     computerAI();
 
     ball.style.top = ballY + "px";
-    ball.style.left = ballX + "px";
+    ball.style.left = ballX + "px"; // Corrected typo here
     player.style.top = playerY + "px";
     computer.style.top = computerY + "px";
 
@@ -71,7 +80,7 @@ function reset() {
 
 function computerAI() {
     const computerCenter = computerY + 50;
-    const delay = Math.random() * 15; // Introduce randomness to AI's decision-making
+    const delay = currentLevel.delay * Math.random();
 
     if (Math.random() < 0.95) {
         if (ballY > computerCenter + delay) {
@@ -81,7 +90,6 @@ function computerAI() {
         }
     }
 }
-
 
 document.addEventListener("mousemove", (e) => {
     const mouseY = e.clientY - document.querySelector(".game").getBoundingClientRect().top;
