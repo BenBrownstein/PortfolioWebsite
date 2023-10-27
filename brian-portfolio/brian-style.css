@@ -29,6 +29,7 @@
             display: none;
         }
 
+        /* Style for the individual image containers */
         .image-container {
             display: flex;
             justify-content: space-around;
@@ -36,13 +37,15 @@
             margin: 20px 0;
         }
 
-        /* Style for the individual image containers */
-        .image-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 20px 0;
+
+        
+        /* Set a fixed height for the images to make them the same height */
+        .image-container img {
+            max-height: 400px;
+            /* Adjust the height as needed */
         }
+
+        
 
         /* Formatting for Pong-Game*/
         #games {
