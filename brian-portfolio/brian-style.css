@@ -36,10 +36,12 @@
             margin: 20px 0;
         }
 
-        img {
-            max-width: 500px;
-            height: auto;
-            margin: 5px;
+        /* Style for the individual image containers */
+        .image-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px 0;
         }
 
         /* Formatting for Pong-Game*/
@@ -106,13 +108,12 @@
             cursor: pointer;
             transition: background-color 0.3s;
         }
-        
+
         #smoothcomp-link:hover {
             background-color: #178735;
         }
-        
+
         .rounded-image {
             border-radius: 50%;
             max-width: 100%;
         }
-        
