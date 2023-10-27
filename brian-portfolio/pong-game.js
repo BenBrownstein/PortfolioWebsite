@@ -71,12 +71,17 @@ function reset() {
 
 function computerAI() {
     const computerCenter = computerY + 50;
-    if (computerCenter < ballY - 35) {
-        computerY += 5;
-    } else if (computerCenter > ballY + 35) {
-        computerY -= 5;
+    const delay = Math.random() * 15; // Introduce randomness to AI's decision-making
+
+    if (Math.random() < 0.95) {
+        if (ballY > computerCenter + delay) {
+            computerY += 5; // Move the paddle down
+        } else if (ballY < computerCenter - delay) {
+            computerY -= 5; // Move the paddle up
+        }
     }
 }
+
 
 document.addEventListener("mousemove", (e) => {
     const mouseY = e.clientY - document.querySelector(".game").getBoundingClientRect().top;
