@@ -62,7 +62,7 @@ function update() {
     computerAI();
 
     ball.style.top = ballY + "px";
-    ball.style.left = ballX + "px"; // Corrected typo here
+    ball.style.left = ballX + "px"; 
     player.style.top = playerY + "px";
     computer.style.top = computerY + "px";
 
