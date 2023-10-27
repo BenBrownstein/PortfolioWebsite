@@ -23,11 +23,11 @@ const gameBounds = {
 const aiLevels = [
     { delay: 42 }, // Level 0: Easier
     { delay: 40 }, // Level 1: Intermediate
-    { delay: 38 }  // Level 2: Harder
+    { delay: 20 }  // Level 2: Harder
 ];
 
 // Set the AI level based on the current game situation
-const currentLevel = aiLevels[0]; // Adjust the level as needed
+const currentLevel = aiLevels[2]; // Adjust the level as needed
 
 function update() {
     ballX += ballSpeedX;
@@ -62,7 +62,7 @@ function update() {
     computerAI();
 
     ball.style.top = ballY + "px";
-    ball.style.left = ballX + "px"; 
+    ball.style.left = ballX + "px";
     player.style.top = playerY + "px";
     computer.style.top = computerY + "px";
 
