@@ -30,3 +30,4 @@ function changeStylesheet(stylesheetPath) {
 function invertColors() {
     document.body.classList.add("invert-colors"); // Add a class to the body element to invert colors
 }
+

@@ -8,6 +8,20 @@
     src: url("../62933a2951ef01f4eafd9bdf4d3cd2f0/980d14c0c85495b48b9a9134658e6121/Rubik_Pixels/RubikPixels-Regular.ttf");
 }*/
 
+html,
+body {
+    height: 100%;
+}
+
+iframe {
+    margin: 8px 8px 8px -8px;
+    /*Note: top right bottom left*/
+    width: 675px;
+    height: 515px;
+    border: solid white;
+    box-shadow: 0 4px 8px 0 rgb(0, 0, 0), 0 6px 20px 0 rgb(255, 255, 255);
+}
+
 body {
     margin: 10px;
     font-family: 'Courier New', Courier, monospace;
@@ -22,9 +36,8 @@ body {
     background-attachment: fixed;
 }
 
-body {
-    
-}
+body {}
+
 body address {
     font-size: 12px;
 }
@@ -65,7 +78,7 @@ a {
     filter: invert(1);
 }
 
-@media only screen and (width <= 560px) {
+@media only screen and (width <=560px) {
     img {
         margin: 0px;
         width: 100%;

@@ -1,0 +1,65 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Randall Dizon</title>
+
+    <link rel="icon" href="../Media/Images/CoughingCatIcon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/slicknav.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/SlickNav/1.0.10/jquery.slicknav.min.js"></script>
+    <script
+        type="text/javascript"> $(document).ready(function () { $('#nav_menu').slicknav({ prependTo: "#mobile_menu" }); });</script>
+    <link rel="stylesheet" href="1d74fbc52e1db8c23d4dba04a0becc9f.css">
+
+</head>
+
+<style>
+    body {
+        width: 640px;
+        height: 480px;
+        background-color: rgb(0, 0, 0);
+        background-image: none;
+        color: white;
+        font-size: 12px;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <div>
+        <pre id="output"></pre>
+        \\root\rstlne\><input
+            style="border: none; background-color: black; color: white; font-family: 'Courier New', Courier, monospace; font-size: 12px; width: 80%"
+            id="commandInput" type="text" placeholder="" />
+    </div>
+    <a id="downloadLink" href="#" style="display: none;" download="454bfc07eaeffd6c591fe15938b8eff7.md5">Download
+        File</a>
+    <script>
+        const outputElement = document.getElementById("output");
+        const commandInput = document.getElementById("commandInput");
+        const downloadLink = document.getElementById("downloadLink");
+
+        commandInput.addEventListener("keydown", function (event) {
+            if (event.key === "Enter") {
+                event.preventDefault();
+                handleCommand(commandInput.value);
+                commandInput.value = "";
+            }
+        });
+
+        function handleCommand(command) {
+            if (command === "wget 454bfc07eaeffd6c591fe15938b8eff7.md5" || command === "wget ByteBanditsQRCode.md5") {
+
+                // Simulate a file download
+                outputElement.innerHTML += "Downloading image...\n\n";
+                
+                // Simulate a click on the download link
+                downloadLink.click();
+            } else {
+                // Display an error message for an incorrect command
+                outputElement.innerHTML += command + ` is not recognized as an internal or external command,\n` + `operable program or batch file.\n\n`;
+            }
+        }
+    </script>
+</body>
