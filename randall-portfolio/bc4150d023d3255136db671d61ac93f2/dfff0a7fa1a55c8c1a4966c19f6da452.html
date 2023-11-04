@@ -33,33 +33,5 @@
             style="border: none; background-color: black; color: white; font-family: 'Courier New', Courier, monospace; font-size: 12px; width: 80%"
             id="commandInput" type="text" placeholder="" />
     </div>
-    <a id="downloadLink" href="#" style="display: none;" download="454bfc07eaeffd6c591fe15938b8eff7.md5">Download
-        File</a>
-    <script>
-        const outputElement = document.getElementById("output");
-        const commandInput = document.getElementById("commandInput");
-        const downloadLink = document.getElementById("downloadLink");
-
-        commandInput.addEventListener("keydown", function (event) {
-            if (event.key === "Enter") {
-                event.preventDefault();
-                handleCommand(commandInput.value);
-                commandInput.value = "";
-            }
-        });
-
-        function handleCommand(command) {
-            if (command === "wget 454bfc07eaeffd6c591fe15938b8eff7.md5" || command === "wget ByteBanditsQRCode.md5") {
-
-                // Simulate a file download
-                outputElement.innerHTML += "Downloading image...\n\n";
-                
-                // Simulate a click on the download link
-                downloadLink.click();
-            } else {
-                // Display an error message for an incorrect command
-                outputElement.innerHTML += command + ` is not recognized as an internal or external command,\n` + `operable program or batch file.\n\n`;
-            }
-        }
-    </script>
+    <script src="dfff0a7fa1a55c8c1a4966c19f6da452.js"></script>
 </body>
