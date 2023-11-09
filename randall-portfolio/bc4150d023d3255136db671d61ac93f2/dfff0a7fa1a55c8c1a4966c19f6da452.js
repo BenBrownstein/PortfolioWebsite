@@ -1,6 +1,15 @@
 const outputElement = document.getElementById("output");
 const commandInput = document.getElementById("commandInput");
 
+// Function to focus the input field when the page loads and when the document is clicked
+function focusInput() {
+    commandInput.focus();
+}
+window.onload = function () {
+    commandInput.focus();
+};
+document.addEventListener("click", focusInput);
+
 commandInput.addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
@@ -8,6 +17,9 @@ commandInput.addEventListener("keydown", function (event) {
         commandInput.value = "";
     }
 });
+
+// Disable autocomplete for the input field
+commandInput.setAttribute("autocomplete", "off");
 
 function handleCommand(command) {
     command = command.toLowerCase(); // Convert the input to lowercase
@@ -17,11 +29,12 @@ function handleCommand(command) {
         // Simulate a file download
         outputElement.innerHTML += "Available Commands:\n\n";
         outputElement.innerHTML += "CLS            Clear the terminal screen.\n";
+        outputElement.innerHTML += "HELP           Lists available commands on this terminal.\n";
         outputElement.innerHTML += "INFO           Display information about this terminal.\n";
         outputElement.innerHTML += "LIST           Display a list of files and subdirectories in a directory.\n";
         outputElement.innerHTML += "PING           Test the reachability of a host on an Internet Protocol (IP) network. [Disabled]\n";
-        outputElement.innerHTML += "READ           Opens file in directory.\n";
-        outputElement.innerHTML += "WGET           Download files or directory.\n\n";
+        outputElement.innerHTML += "READ           View text file in directory.\n";
+        outputElement.innerHTML += "WGET           Download external files or directory.\n\n";
 
     } else if (command === 'cls') {
 
@@ -42,6 +55,13 @@ function handleCommand(command) {
         outputElement.innerHTML += "10/17/2023  11:22           5,328 hex.txt\n";
         outputElement.innerHTML += "              1 File(s)     5,328 bytes\n";
         outputElement.innerHTML += "              2 Dir(s)    994,672 bytes free\n\n";
+
+    } else if (command === 'read') {
+
+        outputElement.innerHTML += "Usage: READ [FILENAME]\n\n";
+        outputElement.innerHTML += "Attributes:\n";
+        outputElement.innerHTML += "[FILENAME]      The name of file to read.\n\n";
+        outputElement.innerHTML += "Example: READ myfile.txt, will output the contents of myfile.txt.\n\n";
 
     } else if (command === 'read hex.txt') {
 
@@ -100,7 +120,7 @@ function handleCommand(command) {
         outputElement.innerHTML += "61 72 61 74 65 20 66 72 6F 6D 20 6D 79 20 72 65 61 6C 20 6C 69 66 65 20 73 65 6C 66 2C 20 49 20\n";
         outputElement.innerHTML += "63 68 61 6E 67 65 64 20 74 68 69 6E 67 73 20 61 72 6F 75 6E 64 20 74 6F 20 70 6F 69 6E 74 20 65\n";
         outputElement.innerHTML += "6C 73 65 77 68 65 72 65 2E 0A 0A 41 6E 79 77 61 79 2C 20 74 68 61 74 27 73 20 61 6C 6C 21 0A 0A\n";
-        outputElement.innerHTML += "2D 20 52 61 6E 64 61 6C 6C 20 44 69 7A 6F 6E 20\n\n";
+        outputElement.innerHTML += "2D 20 52 61 6E 64 61 6C 6C 20 44 69 7A 6F 6E 0A 0A 0A 0A 0A 0A 0A 0A 0A 0A 0A 0A 0A 0A 0A 0A 0A\n\n";
 
     } else if (command === "wget 454bfc07eaeffd6c591fe15938b8eff7.md5") {
 
@@ -116,10 +136,51 @@ function handleCommand(command) {
 
         window.location.href = 'ByteBanditsQRCode.md5';
 
+    } else if (command === "wget hex.txt") {
+
+        // Simulate a file download
+        outputElement.innerHTML += "Downloading file...\n\n";
+
+        var a = document.createElement('a');
+        a.href = 'hex.txt';
+        a.download = 'hex.txt'; // This sets the download filename
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+    } else if (command === "wget bytebanditsqrcode.jpg") {
+
+        // Simulate a file download
+        outputElement.innerHTML += "Downloading file...\n\n";
+
+        var a = document.createElement('a');
+        a.href = 'ByteBanditsQRCode.jpg';
+        a.download = 'ByteBanditsQRCode.jpg'; // This sets the download filename
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+    } else if (command === 'wget') {
+
+        outputElement.innerHTML += "Usage: WGET [FILENAME]\n\n";
+        outputElement.innerHTML += "Attributes:\n";
+        outputElement.innerHTML += "[FILENAME]      The name of file to download.\n\n";
+        outputElement.innerHTML += "Example: WGET myfile.txt, will download myfile.txt.\n\n";
+
+    } else if (command === 'hidden') {
+
+        outputElement.innerHTML += "------------------------------------------------------------\n";
+        outputElement.innerHTML += "RSTLNE OS v0.1\n";
+        outputElement.innerHTML += "------------------------------------------------------------\n\n";
+        outputElement.innerHTML += "There is 1 hidden file in this terminal.\n\n";
+        outputElement.innerHTML += "Type HELP to list commands.\n\n";
+
     } else {
 
         // Display an error message for an incorrect command
-        outputElement.innerHTML += command + ` is not recognized as an internal or external command,\n` + `operable program or batch file.\n\n`;
+        outputElement.innerHTML += command + " is not recognized as an internal or external command,\n" + "operable program or batch file.\n\n";
 
     }
 }
