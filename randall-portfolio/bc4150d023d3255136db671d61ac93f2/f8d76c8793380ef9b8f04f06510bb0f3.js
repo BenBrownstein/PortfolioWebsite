@@ -1,10 +1,20 @@
 function promptForSecretCode() {
-    var secretCode = prompt("Please enter the secret code:");
-    if (secretCode === "rstlne") { // Replace with your actual secret code
-        window.location.href = "bc4150d023d3255136db671d61ac93f2/1d74fbc52e1db8c23d4dba04a0becc9f.html"; // Redirect to the secret page
+    var secretCode = prompt("Please enter password:");
+
+    // Check if the user clicked "Cancel"
+    if (secretCode === null) {
+        alert("Cancelling operation...");
+        return;
+    }
+
+    // Convert the input to lowercase
+    secretCode = secretCode.toLowerCase();
+
+    if (secretCode === "rstlne") {
+        window.location.href = "bc4150d023d3255136db671d61ac93f2/1d74fbc52e1db8c23d4dba04a0becc9f.html";
     } else {
-        alert("Incorrect secret code. Please try again."); // Change the stylesheet dynamically
-        changeStylesheet("bc4150d023d3255136db671d61ac93f2/1d74fbc52e1db8c23d4dba04a0becc9f.css"); // Replace "incorrect.css" with the path to your stylesheet
+        alert("Incorrect password. Please try again.");
+        changeStylesheet("bc4150d023d3255136db671d61ac93f2/1d74fbc52e1db8c23d4dba04a0becc9f.css");
         invertColors();
     }
 }
