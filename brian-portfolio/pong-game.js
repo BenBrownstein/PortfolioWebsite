@@ -23,7 +23,7 @@ const gameBounds = {
 const aiLevels = [
     { delay: 42 }, // Level 0: Easier
     { delay: 40 }, // Level 1: Intermediate
-    { delay: 20 }  // Level 2: Harder
+    { delay: 22 }  // Level 2: Harder
 ];
 
 // Set the AI level based on the current game situation

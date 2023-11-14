@@ -10,21 +10,24 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-image: url("brian-portfolio/images/image10.gif"); /* Adjust the path to your image */
+            background-image: url("brian-portfolio/images/4cowboys-1.png");/* Use this background 4 transition effect */
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-position: center;
-            color: white; /* Set font color to yellow */
-            text-align: center; /* Center text within the body */
+            color: white;
+            text-align: center;
+            transition: background 0.5s; /* Add for transition effect *//* Add for transition effect */
+            /* ^^^^^^^^^^^^^^^^^^^^^^^^^^
+             ^Add 4 transition effect^ */
         }
     
         #nav_menu {
-            text-align: center; /* Center the navigation menu */
+            text-align: center;
         }
     
         h1 {
-            text-align: center; /* Center the heading */
+            text-align: center;
         }
     </style>
 
@@ -36,20 +39,40 @@
             <img src="Media/Images/ByteBanditsBanner.gif" alt="Byte Bandits Banner" width="531px">
         </div>
     </center>
-
+    <!-- Add this to Nav Links class="transition-link" data-transition="images/Fast_transition.gif  -->
     <header>
         <nav id="nav_menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="ben-portfolio/ben-index.html">Ben</a></li>
-                <li><a href="randall-portfolio/randall-index.html">Randall</a></li>
-                <li><a href="jessica-portfolio/jessica-index.html">Jessica</a></li>
-                <li><a href="brian-portfolio/brian-index.html">Brian</a></li>
+                <li><a href="index.html" class="transition-link" data-transition="brian-portfolio/images/Fast_transition.gif">Home</a></li>
+                <li><a href="ben-portfolio/ben-index.html" class="transition-link" data-transition="brian-portfolio/images/Fast_transition.gif">Ben</a></li>
+                <li><a href="randall-portfolio/randall-index.html" class="transition-link" data-transition="brian-portfolio/images/Fast_transition.gif">Randall</a></li>
+                <li><a href="jessica-portfolio/jessica-index.html" class="transition-link" data-transition="brian-portfolio/images/Fast_transition.gif">Jessica</a></li>
+                <li><a href="brian-portfolio/brian-index.html" class="transition-link" data-transition="brian-portfolio/images/Fast_transition.gif">Brian</a></li>
             </ul>
         </nav>
     </header>
     
     <h1>Welcome</h1>
+    <!-- Script For Transition Graphics -->  
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const transitionLinks = document.querySelectorAll('.transition-link');
+            transitionLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const transitionImage = this.dataset.transition;
+                    playTransition(transitionImage);
+                    setTimeout(() => {
+                        window.location.href = this.href; 
+                    }, 1900); // Change the time (in milliseconds) as needed
+                });
+            });
+
+            function playTransition(transitionImage) {
+                document.body.style.backgroundImage = `url('${transitionImage}')`;
+            }
+        });
+    </script>
 </body>
 
 </html>
