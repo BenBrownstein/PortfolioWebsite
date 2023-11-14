@@ -8,23 +8,44 @@
     <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="brian-style.css">
     <script src="brian-script.js" defer></script>
+    <style>
+        body {
+            background-image: url('images/4cowboys-1.png');
+            /* Initial background image */
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            transition: background 0.5s;
+            /* Add a transition effect */
+        }
+    </style>
 </head>
 
 <body>
-    <div class="logo-container">
-        <a target="_top" href="https://flamingtext.com/">
-            <img src="https://blog.flamingtext.com/blog/2023/10/25/flamingtext_com_1698199628_615509578.gif" border="0">
-        </a>
-    </div>
-    <nav id="nav_menu">
-        <ul>
-            <li><a href="../index.html" style="color: white;">Home</a></li>
-            <li><a href="../ben-portfolio/ben-index.html" style="color: white;">Ben</a></li>
-            <li><a href="../randall-portfolio/randall-index.html" style="color: white;">Randall</a></li>
-            <li><a href="../jessica-portfolio/jessica-index.html" style="color: white;">Jessica</a></li>
-            <li><a href="../brian-portfolio/brian-index.html" style="color: white;">Brian</a></li>
-        </ul>
-    </nav>
+    <header>
+        <div class="logo-container">
+            <a target="_top" href="https://flamingtext.com/">
+                <img src="https://blog.flamingtext.com/blog/2023/10/25/flamingtext_com_1698199628_615509578.gif"
+                    border="0">
+            </a>
+        </div>
+        <nav id="nav_menu">
+            <ul>
+                <li><a href="../index.html" class="transition-link" data-transition="images/Fast_transition.gif"
+                        style="color: white;">Home</a></li>
+                <li><a href="../ben-portfolio/ben-index.html" class="transition-link"
+                        data-transition="images/Fast_transition.gif">Ben</a></li>
+                <li><a href="../randall-portfolio/randall-index.html" class="transition-link"
+                        data-transition="images/Fast_transition.gif">Randall</a></li>
+                <li><a href="../jessica-portfolio/jessica-index.html" class="transition-link"
+                        data-transition="images/Fast_transition.gif">Jessica</a></li>
+                <li><a href="../brian-portfolio/brian-index.html" class="transition-link"
+                        data-transition="images/Fast_transition.gif">Brian</a></li>
+            </ul>
+        </nav>
+    </header>
 
     <h1>Brian Louderback</h1>
     <img src="https://smoothcomp.com/pictures/t/1734349-xc0n/brian-louderback.jpg" alt="Brian Louderback"
@@ -52,14 +73,32 @@
             <iframe src="pong-game.html" width="600" height="405" frameborder="5"></iframe>
         </div>
 
-        <div class="image-container">
-            <img src="images/image11.gif" alt="Image 11" style="height: 400px; width: auto;">
         </div>
     </section>
 
     <footer>
         <p>&copy; 2023 Brian Louderback</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const transitionLinks = document.querySelectorAll('.transition-link');
+            transitionLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    const transitionImage = this.dataset.transition;
+                    playTransition(transitionImage);
+                    setTimeout(() => {
+                        window.location.href = this.href;
+                    }, 1900); // Change the time (in milliseconds) as needed
+                });
+            });
+
+            function playTransition(transitionImage) {
+                document.body.style.backgroundImage = `url('${transitionImage}')`;
+            }
+        });
+    </script>
 
 </body>
 

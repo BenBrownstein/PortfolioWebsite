@@ -1,124 +1,136 @@
-        /* Center the logo horizontally */
-        .logo-container {
-            display: flex;
-            justify-content: center;
-            padding-top: 20px;
-        }
+/* Center the logo horizontally */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Center vertically */
+    padding-top: 20px;
+}
 
-        /* Style for Pong game iframe */
-        iframe.pong {
-            display: block;
-            margin: 0 auto;
-            border: none;
-        }
-
-        /* Limit the width of the <p> tags and align them to the left */
-        p {
-            max-width: 600px;
-            margin: 0;
-            padding: 10px 0;
-        }
-
-        /* Reduce spacing between sections */
-        section {
-            margin-bottom: 20px;
-        }
-
-        /* Formatting For the Contact Form */
-        #contact-form {
-            display: none;
-        }
-
-        /* Style for the individual image containers */
-        .image-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 20px 0;
-        }
+.logo-container img {
+    max-width: 100%;
+    height: auto;
+}
 
 
-        
-        /* Set a fixed height for the images to make them the same height */
-        .image-container img {
-            max-height: 400px;
-            /* Adjust the height as needed */
-        }
+#nav_menu {
+    text-align: center;
+}
 
-        
+h1 {
+    text-align: center;
+}
 
-        /* Formatting for Pong-Game*/
-        #games {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-        }
+#email-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    /* Choose your desired background color */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        .game-container,
-        .image-container {
-            flex: 1;
-        }
+#email-link:hover {
+    background-color: #178735;
+    /* Change the background color on hover */
+}
 
-        .game-iframe {
-            max-width: 100%;
-            height: auto;
-        }
+#github-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    /* Choose your desired background color */
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        #email-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            /* Choose your desired background color */
-            color: white;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+#github-link:hover {
+    background-color: #178735;
+    /* Change the background color on hover */
+}
 
-        #email-link:hover {
-            background-color: #178735;
-            /* Change the background color on hover */
-        }
+#smoothcomp-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-        #github-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            /* Choose your desired background color */
-            color: white;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
+#smoothcomp-link:hover {
+    background-color: #178735;
+}
 
-        #github-link:hover {
-            background-color: #178735;
-            /* Change the background color on hover */
-        }
+.rounded-image {
+    border-radius: 50%;
+    max-width: 100%;
+}
 
-        #smoothcomp-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            text-decoration: none;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
 
-        #smoothcomp-link:hover {
-            background-color: #178735;
-        }
 
-        .rounded-image {
-            border-radius: 50%;
-            max-width: 100%;
-        }
+/* Limit the width of the <p> tags and align them to the left */
+p {
+    max-width: 600px;
+    margin: 0;
+    padding: 10px 0;
+}
 
-        
+/* Reduce spacing between sections */
+section {
+    margin-bottom: 20px;
+}
+
+/* Formatting For the Contact Form */
+#contact-form {
+    display: none;
+}
+
+/* Style for the individual image containers */
+.image-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+/* Formatting for Pong-Game*/
+#games {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.game-container,
+.image-container {
+    flex: 1;
+}
+
+.game-iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style for Pong game iframe */
+iframe.pong {
+    display: block;
+    margin: 0 auto;
+    border: none;
+}
+
+/* Set a fixed height for the images to make them the same height */
+.image-container img {
+    max-height: 400px;
+    /* Adjust the height as needed */
+}
