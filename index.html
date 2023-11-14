@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="style.css">
     <style>
         body {
-            background-image: url("brian-portfolio/images/4cowboys-1.png");
+            background-image: url("brian-portfolio/images/4cowboys-1.png");/* Use this background 4 transition effect */
             background-size: cover;
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-position: center;
             color: white;
             text-align: center;
-            transition: background 0.5s; /* Add a transition effect */
+            transition: background 0.5s; /* Add for transition effect */
         }
     
         #nav_menu {
@@ -37,7 +37,7 @@
             <img src="Media/Images/ByteBanditsBanner.gif" alt="Byte Bandits Banner" width="531px">
         </div>
     </center>
-
+    <!-- Add this to Nav Links class="transition-link" data-transition="images/Fast_transition.gif  -->
     <header>
         <nav id="nav_menu">
             <ul>
@@ -51,7 +51,7 @@
     </header>
     
     <h1>Welcome</h1>
-
+    <!-- Script For Transition Graphics -->  
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             const transitionLinks = document.querySelectorAll('.transition-link');
