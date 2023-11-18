@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    
+
     // Define an array of job experiences
     const jobExperiences = [
         {
