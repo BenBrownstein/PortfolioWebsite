@@ -16,8 +16,9 @@
             background-repeat: no-repeat;
             background-position: center;
             color: white;
-            transition: background 0.5s; /* Add 4 transition effect */
-          
+            transition: background 0.5s; /* Add 4 transition effect *//* Add 4 transition effect */
+          /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+             ^Add 4 transition effect^ */
         }
     </style>
 </head>
@@ -30,6 +31,7 @@
                     border="0">
             </a>
         </div>
+
         <!-- Add this to Nav Links class="transition-link" data-transition="images/Fast_transition.gif  -->
         <nav id="nav_menu">
             <ul>
@@ -79,6 +81,7 @@
     <footer>
         <p>&copy; 2023 Brian Louderback</p>
     </footer>
+
       <!-- Script For Transition Graphics -->  
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -90,7 +93,7 @@
                     playTransition(transitionImage);
                     setTimeout(() => {
                         window.location.href = this.href;
-                    }, 1900); // Change the time (in milliseconds) as needed
+                    }, 1900);   // Change the time (in milliseconds) as needed
                 });
             });
 

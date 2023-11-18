@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tic Tac Toe</title>
+  <style>
+    .board {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      width: 200px;
+      height: 200px;
+      border: 1px solid black;
+    }
+
+    .cell {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="board" id="board"></div>
+  <script>
+    const board = [
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""],
+    ];
+
+    function renderBoard() {
+      const boardElement = document.getElementById("board");
+      boardElement.innerHTML = "";
+
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          const cellElement = document.createElement("div");
+          cellElement.classList.add("cell");
+          cellElement.textContent = board[i][j];
+          boardElement.appendChild(cellElement);
+        }
+      }
+    }
+
+    function handleClick(cell) {
+      if (board[cell.row][cell.col] === "") {
+        board[cell.row][cell.col] = "X";
+        renderBoard();
+
+        // Check if the game is over
+        if (checkWinner()) {
+          alert("You win!");
+        } else if (boardFull()) {
+          alert("Tie game!");
+        } else {
+          // Computer's turn
+          computerPlay();
+        }
+      }
+    }
+
+    function computerPlay() {
+      // Randomly choose an empty cell
+      const emptyCells = [];
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          if (board[i][j] === "") {
+            emptyCells.push({ row: i, col: j });
+          }
+        }
+      }
+
+      const randomCell = emptyCells[Math.floor(Math.random() * emptyCells.length)];
+      board[randomCell.row][randomCell.col] = "O";
+      renderBoard();
+    }
+
+    function checkWinner() {
+      // Check for horizontal wins
+      for (let i = 0; i < 3; i++) {
+        if (board[i][0] === board[i][1] && board[i][1] === board[i][2] && board[i][0] !== "") {
+          return true;
+        }
+      }
+
+      // Check for vertical wins
+     
+        }
+      }
+
+      // Check for diagonal wins
+
+    
+    }
+
+    renderBoard();
+
+    // Add event listeners to all cells
+    const cells = document.querySelectorAll(".cell");
+    for (const cell of cells) {
+      cell.addEventListener("click", handleClick);
+    }
+  </script>
+</body>
+</html>
