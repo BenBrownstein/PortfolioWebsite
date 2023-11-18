@@ -23,7 +23,7 @@ body {
 }
 
 .hiddenIcon {
-    color: #0000000e;
+    color: rgba(71, 200, 16, 0.25);
     bottom: 5px;
     right: 20px;
     position: fixed;
