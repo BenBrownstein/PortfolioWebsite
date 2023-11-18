@@ -33,6 +33,16 @@
             margin: 10px;
             margin-left: 30px;
         }
+
+        body {
+            background-image: url('../brian-portfolio/images/4cowboys-1.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            transition: background 0.5s;
+        }
     </style>
 </head>
 
@@ -48,14 +58,23 @@
         <!-- Navigation Bar -->
         <nav id="nav_menu">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="ben-index.html">Ben</a></li>
-                <li><a href="../randall-portfolio/randall-index.html">Randall</a></li>
-                <li><a href="../jessica-portfolio/jessica-index.html">Jessica</a></li>
-                <li><a href="../brian-portfolio/brian-index.html">Brian</a></li>
+                <li><a href="../index.html" class="transition-link"
+                        data-transition="../brian-portfolio/images/Fast_transition.gif" style="color: white;">Home</a>
+                </li>
+                <li><a href="../ben-portfolio/ben-index.html" class="transition-link"
+                        data-transition="../brian-portfolio/images/Fast_transition.gif" style="color: white;">Ben</a>
+                </li>
+                <li><a href="../randall-portfolio/randall-index.html" class="transition-link"
+                        data-transition="../brian-portfolio/images/Fast_transition.gif"
+                        style="color: white;">Randall</a></li>
+                <li><a href="../jessica-portfolio/jessica-index.html" class="transition-link"
+                        data-transition="../brian-portfolio/images/Fast_transition.gif"
+                        style="color: white;">Jessica</a></li>
+                <li><a href="../brian-portfolio/brian-index.html" class="transition-link"
+                        data-transition="../brian-portfolio/images/Fast_transition.gif" style="color: white;">Brian</a>
+                </li>
             </ul>
         </nav>
-    </header>
 
     <section id="Info">
         <h1>Contact Info</h1>
@@ -86,6 +105,8 @@
     <iframe src="rps.html" style="border:none;" height="300px" width="300px"></iframe>
     <p id="Example2Text"> This is a mostly ChatGPT generated game to add another example and use Javascript.</p>
 
+    <!-- Script For Transition Graphics -->
+    <script src="../brian-portfolio/transition.js"></script>
 </body>
 
 </html>

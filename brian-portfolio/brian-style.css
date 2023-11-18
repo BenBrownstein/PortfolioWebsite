@@ -131,23 +131,34 @@ iframe.pong {
 
 /* Style for the individual image containers */
 .image-container {
-    width: calc((405px * 8.5) / 11); /* Calculate width based on height and aspect ratio */
-    height: 405px; /* Set the height to match the pong game */
-    max-height: 405px; /* Set the maximum height to match the pong game */
-    overflow: hidden; /* Hide any content exceeding the container */
-    border: none; /* Remove any border */
-    border-radius: 10px; /* Optional: Add border radius */
-    margin-bottom: 20px; /* Optional: Add margin for spacing */
+    width: calc((405px * 8.5) / 11);
+    /* Calculate width based on height and aspect ratio */
+    height: 405px;
+    /* Set the height to match the pong game */
+    max-height: 405px;
+    /* Set the maximum height to match the pong game */
+    overflow: hidden;
+    /* Hide any content exceeding the container */
+    border: none;
+    /* Remove any border */
+    border-radius: 10px;
+    /* Optional: Add border radius */
+    margin-bottom: 20px;
+    /* Optional: Add margin for spacing */
     display: flex;
     justify-content: center;
     align-items: center;
     /* background-color: black;  Remove or comment out to eliminate black background */
-    box-sizing: border-box; /* Include padding and border in total width/height */
+    box-sizing: border-box;
+    /* Include padding and border in total width/height */
 }
 
 /* Style for the image */
 .image-container img {
-    width: auto; /* Adjust the width */
-    height: 100%; /* Set height to 100% */
-    object-fit: contain; /* Fit the image inside the container */
+    width: auto;
+    /* Adjust the width */
+    height: 100%;
+    /* Set height to 100% */
+    object-fit: contain;
+    /* Fit the image inside the container */
 }
