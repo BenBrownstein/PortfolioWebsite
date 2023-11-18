@@ -31,6 +31,22 @@
         });
     </script>
     -->
+    <!--Style for Transition Effect-->
+    <style>
+        body {
+            background-image: url('../brian-portfolio/images/4cowboys-1.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: white;
+            transition: background 0.5s; 
+        }
+
+        iframe {
+            color: white;
+        }
+    </style>
 
 </head>
 
@@ -45,11 +61,16 @@
     <header>
         <nav id="nav_menu">
             <ul>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="../ben-portfolio/ben-index.html">Ben</a></li>
-                <li><a href="randall-index.html">Randall</a></li>
-                <li><a href="../jessica-portfolio/jessica-index.html">Jessica</a></li>
-                <li><a href="../brian-portfolio/brian-index.html">Brian</a></li>
+                <li><a href="../index.html" class="transition-link" data-transition="../brian-portfolio/images/Fast_transition.gif"
+                    style="color: white;">Home</a></li>
+                <li><a href="../ben-portfolio/ben-index.html" class="transition-link" data-transition="../brian-portfolio/images/Fast_transition.gif"
+                    style="color: white;">Ben</a></li>
+                <li><a href="../randall-portfolio/randall-index.html" class="transition-link" data-transition="../brian-portfolio/images/Fast_transition.gif"
+                    style="color: white;">Randall</a></li>
+                <li><a href="../jessica-portfolio/jessica-index.html" class="transition-link" data-transition="../brian-portfolio/images/Fast_transition.gif"
+                    style="color: white;">Jessica</a></li>
+                <li><a href="../brian-portfolio/brian-index.html" class="transition-link" data-transition="../brian-portfolio/images/Fast_transition.gif"
+                    style="color: white;">Brian</a></li>
             </ul>
         </nav>
     </header>
@@ -115,7 +136,12 @@
         <li>Restored network functionality in a timely manner after numerous power hits.</li>
     </ul>
 
+<<<<<<< HEAD
     <iframe src="https://neal.fun/password-game/"></iframe>
+=======
+    <iframe src="iframeTest.html" style="color: white;"></iframe>
+
+>>>>>>> 07b05a18bc056924a5ebf5704b65a01512b6305b
 
     <a class="hiddenIcon" href="#" onclick="promptForSecretCode();"><i class="fa-solid fa-key"></i></a>
     <footer>
@@ -124,6 +150,9 @@
 
     <p class="hidden">The key to the code is hidden <br> among common letters therein. <br> But, with a search you
         find it out <br> and bet on The Wheel of Fortune.</p>
+
+                  <!-- Script For Transition Graphics -->  
+                  <script src="../brian-portfolio/transition.js"></script>
 
 </body>
 

@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         {
             jobTitle: "Correction Officer",
             employer: "Camp Taji, Iraq (Government Service)",
-            date: "December 2008-March 2010",
+            date: "October 2009-March 2010",
             description: "Supervised every element of overall operations and security of 12 personnel in charge of Camp Taji's procedures to include escort operations, restraint application, forced cell extractions, Detainee Information Management System (DIMS), Islamic cultural awareness. Provided safe humane care and custody of enemy combatants, collected intelligence for law enforcement and war crime investigations in support of Operation Iraqi Freedom."
         }
     ];
