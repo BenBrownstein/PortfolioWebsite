@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             playTransition(transitionImage);
             setTimeout(() => {
                 window.location.href = this.href;
-            }, 2000);   // Change the time (in milliseconds) as needed
+            }, 1993);   // Change the time (in milliseconds) as needed
         });
     });
 
