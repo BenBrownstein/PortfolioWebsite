@@ -22,15 +22,6 @@ body {
 	 ^Add 4 transition effect^ */
 }
 
-#nav_menu {
-	text-align: center;
-}
-
-
-
-
-
-
 /* nav menu section*/
 
 #nav_menu {
@@ -79,3 +70,4 @@ body {
         width: 100%;
 		height: 100%
     }
+}
