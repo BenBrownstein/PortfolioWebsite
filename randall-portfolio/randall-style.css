@@ -39,10 +39,6 @@ aside {
 
 /*Responsive web design thresholds*/
 @media only screen and (width <= 550px) {
-    img {
-        width: 100%;
-    }
-
     section, aside {
         float: none;
         flex-direction: column;

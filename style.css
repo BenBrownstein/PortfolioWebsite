@@ -4,10 +4,32 @@
 }
 
 body {
+	text-align: left;
     font-family: Blogger Sans;
     background-color: #000000;
 	color: white;
+	background-image: url("Media/Images/4cowboys-1.png");
+	/* Use this background 4 transition effect */
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center;
+	color: white;
+	transition: background 0.5s;
+	/* Add for transition effect */
+	/* Add for transition effect */
+	/* ^^^^^^^^^^^^^^^^^^^^^^^^
+	 ^Add 4 transition effect^ */
 }
+
+#nav_menu {
+	text-align: center;
+}
+
+
+
+
+
 
 /* nav menu section*/
 
@@ -50,3 +72,9 @@ body {
 	margin-top: 0;
 	margin-bottom: 0.25em;
 }
+
+/*Responsive web design thresholds*/
+@media only screen and (width <= 550px) {
+    img {
+        width: 100%;
+    }
