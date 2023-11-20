@@ -1,3 +1,5 @@
+// transition.js
+
 document.addEventListener('DOMContentLoaded', function () {
     const transitionLinks = document.querySelectorAll('.transition-link');
     transitionLinks.forEach(link => {
@@ -7,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             playTransition(transitionImage);
             setTimeout(() => {
                 window.location.href = this.href;
-            }, 1900); // Change the time (in milliseconds) as needed
+            }, 1993);   // Change the time (in milliseconds) as needed
         });
     });
 
