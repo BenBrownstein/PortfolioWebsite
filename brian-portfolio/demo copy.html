@@ -33,9 +33,7 @@
 
 
             function cellClicked(cellNumber){
-                let cell = document.querySelectorAll(".cell")[cellNumber]
-                cell.innerHTML = "X"
-                board[cellNumber] = "X"
+                setCell(cellNumber,"X")
                 if(checkForWin("X"))
                     console.log("Player X wins!")
 
@@ -43,27 +41,31 @@
             }
 
             function boardFull(){
-                return board.filter((cell)=>cell=="").length == 0
+                let firstSquare = board[0] != "" 
+
+                return firstSquare
             }
 
             function computerPlay(){
-                if(boardFull())
-                    return;
+                //If the board is full, return from this function
 
-                while(true){
-                    let r = Math.floor(Math.random()*8)
-                    console.log(r)
+                //Loop infinitely
+                    //Pick a random number, store it in variable r
 
-                    if(board[r] == ""){
-                        let cell = document.querySelectorAll(".cell")[r]
-                        cell.innerHTML = "O"
-                        board[r] = "O"
-                        if(checkForWin("O"))
-                            console.log("Player O wins!")
-                        break;
-                    }
-                }
-                console.log("Computer played")
+                    //Check if the rth position of board array is empty
+                        //If so, find the rth DOM element with class "cell"
+                        //Set its inner HTML to "O"
+                        //Set the board's rth position to "O"
+
+                        //Check to see if player "O" has won
+                            //If so, log that the player has won
+
+                        //Break out of the infinite loop
+            }
+
+            function setCell(index, letter){
+                board[index] = letter
+                document.querySelectorAll(".cell")[index].innerHTML = letter
             }
 
     
@@ -75,7 +77,23 @@
                 return horizontalWin(player) || verticalWin(player) || diagonalWin(player)
             }
 
-            function horizontalWin1(player){
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            function horizontalWin(player){
                 let patternList = [[0,1,2],[3,4,5],[6,7,8]]
                 for(let pattern of patternList){
                     if(board[pattern[0]] === player && board[pattern[1]] === player && board[pattern[2]] === player) return true
@@ -84,7 +102,6 @@
             }
 
             function horizontalWin2(player){
-    
                 if(board[0] === player && board[1] === player && board[2] === player) return true
                 if(board[3] === player && board[4] === player && board[5] === player) return true
                 if(board[6] === player && board[7] === player && board[8] === player) return true
@@ -119,6 +136,47 @@
 
                 return allMatching(firstDiag, player) ||
                        allMatching(secondDiag, player)
+            }
+
+
+            //Hint: Use setCell(0,"X")
+            //      Or if in a loop: setCell(i,"X")
+
+            function fillBoardWithX(){
+                setCell(0,"X")
+                setCell(1,"X")
+                setCell(2,"X")
+                setCell(3,"X")
+                setCell(4,"X")
+                setCell(5,"X")
+                setCell(6,"X")
+                setCell(7,"X")
+                setCell(8,"X")
+                //Fills the entire board with "X"s
+              
+
+            }
+
+            function fillBoardWithO(){
+                setCell(0,"y")
+                setCell(1,"y")
+                setCell(2,"y")
+                setCell(3,"y")
+                setCell(4,"y")//Fills the entire board with "O"s
+                setCell(5,"y")
+                setCell(6,"y")
+                setCell(7,"y")
+                setCell(8,"y")
+                setCell(9,"y")
+
+            }
+
+            function fillBoardWithXAboutToWin(){
+                //Fill in a mock tic tac toe situation where X is about to win
+            }
+
+            function fillBoardAtRandom(){
+                //Fills in the tic tac toe board with random Xs and Os (always different)
             }
 
         </script>
