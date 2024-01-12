@@ -1,0 +1,17 @@
+Plan for Website
+
+Already Done
+1. Make a plan for a website: A quizwebsite with different scenerios that 
+    match different scenerios with different questions to ensure the test
+    can cycle through the questions with different scenrios.  That way it's
+    more entertaining and dynamic.
+2. Create a basic website structure with CHATGPT 
+
+Needs to be Done
+1. Start generating Questions.
+2. Start generating scenerios and have a matching picture for the
+    background of that scenerio.
+3. Change the code to make the background render the image in the 
+    background.
+4. Work on layout and CSS.
+5. Aggregate sample questions.
